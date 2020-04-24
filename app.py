@@ -43,7 +43,7 @@ def display_stats():
 --------------------------------
 """)
     while True:
-        print("""--MENU---
+        print("""---MENU---
            
 Here are your choices:
   1) Display Team Stats
@@ -52,12 +52,12 @@ Here are your choices:
         try:
             user_option = int(input("Enter an option -->  "))
         except ValueError:
-            print("We ran into an error. Try again.\n") 
+            print("\nWe ran into an error. Try again.\n") 
         else:   
             if user_option > 2:
-                print("Only type one of the options listed. Try again.\n")
+                print("\nOnly type one of the options listed. Try again.\n")
             elif user_option < 1:
-                print("Only type one of the options listed. Try again.\n") 
+                print("\nOnly type one of the options listed. Try again.\n") 
             elif user_option == 1:
                 print("""
 1) Panthers
@@ -94,8 +94,8 @@ Here are your choices:
                     print("INEXPERIENCED PLAYERS: {}\n".format(inexperienced_players))
                     print("AVERAGE TEAM HEIGHT: {}\n".format(average_player_height))
                     print("GUARDIANS OF PLAYERS: {}\n".format(all_guardians))
-                except ValueError:
-                    print("Error")
+                except IndexError:
+                    print("\nOnly type one of the options listed. Try again.\n")
             else:
                 print("Closing app, see you next time!")
                 break
