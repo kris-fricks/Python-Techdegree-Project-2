@@ -33,9 +33,7 @@ def add_teams_to_players():
         
         if (pair_index + 1) % 3 == 0:
             team_index += 1
-    
     return players_with_teams
-
 
 
 def display_stats():
@@ -44,7 +42,6 @@ def display_stats():
  THE BASKETBALL TEAM STATS TOOL
 --------------------------------
 """)
-
     while True:
         print("""--MENU---
            
