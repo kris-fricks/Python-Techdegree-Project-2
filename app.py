@@ -95,7 +95,7 @@ Here are your choices:
                     print("INEXPERIENCED PLAYERS: {}\n".format(inexperienced_players))
                     print("AVERAGE TEAM HEIGHT: {}\n".format(average_player_height))
                     print("GUARDIANS OF PLAYERS: {}\n".format(all_guardians))
-                except (IndexError, ValueError) as e:
+                except (IndexError, ValueError) as e:  #added ValueError so program doesnt crash
                     pass
                     print("\nOnly type one of the options listed. Try again.\n")
             else:
