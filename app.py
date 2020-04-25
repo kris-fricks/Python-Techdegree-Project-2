@@ -64,8 +64,9 @@ Here are your choices:
 2) Bandits
 3) Warriors
 """)
-                user_option = int(input("Enter an option -->  "))
+                #user_option = int(input("Enter an option -->  "))
                 try:
+                    user_option = int(input("Enter an option -->  "))
                     chosen_team_name = teams[user_option - 1]
                     players = add_teams_to_players()
                     chosen_team = []
@@ -94,7 +95,8 @@ Here are your choices:
                     print("INEXPERIENCED PLAYERS: {}\n".format(inexperienced_players))
                     print("AVERAGE TEAM HEIGHT: {}\n".format(average_player_height))
                     print("GUARDIANS OF PLAYERS: {}\n".format(all_guardians))
-                except IndexError:
+                except (IndexError, ValueError) as e:
+                    pass
                     print("\nOnly type one of the options listed. Try again.\n")
             else:
                 print("Closing app, see you next time!")
